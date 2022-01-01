@@ -1,1 +1,11 @@
 UWSGI restart script
+
+To be used: HP_restart_uwsgi.sh
+
+Script prepared for sample python flask/uwsgi/nginx stack as per 
+https://iotbytes.wordpress.com/python-flask-web-application-on-raspberry-pi-with-nginx-and-uwsgi/
+
+Script finds last tracked uwsgi master processes in /var/log/uwsgi.log file, checks whether those are running and then kills.
+After that it uses the same script placed in rc.local to start uwsgi server.
+
+Restart is needed if you change your Flask app. Only then changes are visible in python script
