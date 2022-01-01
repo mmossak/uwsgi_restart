@@ -1,5 +1,5 @@
 sudo tail /var/log/uwsgi.log | grep 'master process'
-
+#pierwszy commit
 sudo /usr/local/bin/uwsgi --ini /home/pi/sampleApp/uwsgi_config.ini --uid www-data --gid www-data --daemonize /var/log/uwsgi.log
 
 sudo vi /home/pi/sampleApp/sample_app.py
